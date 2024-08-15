@@ -12,44 +12,44 @@ server.listen(3000);
 
 // quit running Node.js server pressing CTRL + C
 
+// assignment 1
+
 // const http = require('http');
 
 // const server = http.createServer((req, res) => {
-//     const url = req.url;
-//     const method = req.method;
-
-//     if ( url === '/'){
-//         res.write('<html>');
-//         res.write('<head><title>users</title></head>');
-//         res.write('<body>');
-//         res.write('<h4>Hi everyone, Stephen speaking!</h4>');
-//         res.write('<ul><li>User one</li><li>User two</li><li>User three</li><li>User four</li></ul>')
-//         res.write('<form action="/create-user" method="POST"><input type="text" name="username"/><button>Submit</button></form>');
-//         res.write('</body>')
-//         res.write('</body>');
-//         return res.end();
-//     }
-
-//     if (url === '/create-user' && method === 'POST'){
-//         const body = [];
-
-//         req.on('data', (chunk) => {
-//             body.push(chunk);
-//         });
-
-//         return req.on('end', () => {
-//             const parsedBody = Buffer.concat(body).toString();
-//             const message = parsedBody.split('=')[1];
-//             console.log(message);
-//             return res.end()
-//         })
-//     }
-
+//   const url = req.url;
+//   if (url === '/') {
 //     res.setHeader('Content-Type', 'text/html');
+//     res.write('<html>');
+//     res.write('<head><title>Assignment 1</title></head>');
+//     res.write(
+//       '<body><form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Send</button></form></body>'
+//     );
+//     res.write('</html>');
+//     return res.end();
+//   }
+//   if (url === '/users') {
+//     res.setHeader('Content-Type', 'text/html');
+//     res.write('<html>');
+//     res.write('<head><title>Assignment 1</title></head>');
+//     res.write('<body><ul><li>User 1</li><li>User 2</li></ul></body>');
+//     res.write('</html>');
+//     return res.end();
+//   }
+//   // Send a HTML response with some "Page not found text
+//   if (url === '/create-user') {
+//     const body = [];
+//     req.on('data', chunk => {
+//       body.push(chunk);
+//     });
+//     req.on('end', () => {
+//       const parsedBody = Buffer.concat(body).toString();
+//       console.log(parsedBody.split('=')[1]); // username=whatever-the-user-entered
+//     });
+//     res.statusCode = 302;
+//     res.setHeader('Location', '/');
 //     res.end();
+//   }
 // });
 
-// const port = 3000;
-// server.listen(port, () => {
-//     console.log(`Server is running at http://localhost:${port}`);
-// })
+// server.listen(3000);
