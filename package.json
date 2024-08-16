@@ -9,5 +9,8 @@
     "start-server": "node app.js"
   },
   "author": "Arturas Jurevicius",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
