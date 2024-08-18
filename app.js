@@ -6,7 +6,7 @@ console.log(routes.someText);
 
 const server = http.createServer(routes.handler);
 
-server.listen(3000);
+server.listen(5000);
 
 // install 3rd party package to this project
 // npm install nodemon --save-dev
