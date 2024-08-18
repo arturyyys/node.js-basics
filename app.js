@@ -1,13 +1,9 @@
 const http = require("http");
 
-const routes = require("./routes.js");
+const routes = require("./routes");
 
 console.log(routes.someText);
 
 const server = http.createServer(routes.handler);
 
-server.listen(5000);
-
-// install 3rd party package to this project
-// npm install nodemon --save-dev
-// npm install (adding node modules package)
+server.listen(3000);
